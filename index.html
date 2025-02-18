@@ -1,0 +1,31 @@
+function setup() {
+  createCanvas(400, 400);
+}
+let olhoX;
+let olhoY;
+
+function preload (){
+  img = loadImage = " https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/800px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg
+}
+
+
+
+function draw() {
+  background("black");
+  fill("#03A9F4");
+  fill("white");
+  circle(150, 150, 60); // olho esquerdo
+  circle(250, 150, 60); // olho direito
+  fill("#3F51B5");
+ 
+ 
+
+  olhoX = map(mouseX, 0, 400, 130, 170);
+  olhoY = map(mouseY, 0, 400, 130, 170);
+
+  circle(olhoX, olhoY, 10); // nova pupila esquerda
+  circle(olhoX + 100, olhoY, 10); //nova pupila direita
+  if (mouseIsPressed) {
+    console.log(mouseX, mouseY);
+  }
+}
